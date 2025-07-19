@@ -7,12 +7,14 @@ Here is a link to my blog with my process and thoughts: https://learning1about1p
 
 
 **Problem:**
+
 I a very active reader and have many close family and friends who are also very active readers. When you read a lot it can be difficult remembering everything you've read! Sometimes I want to go back and reread a book but it can be very difficult trying to find the book when all I have are disorganized links, a stack of books, or scribbled titles. So I thought it would be cool to create a database for all of my books! Key features I would want to include would be: the ability to add to the database, display all the books in the database, and display statistics of the database. But I didn't just want a list of a bunch of titles of books - that wouldn't really help me solve my problem! So it was important to me that I could also include other crucial information that might help me remember the details of each book! For this reason I included other bits of information to be stored in the database like author, year published, genre, what relationships were in the book, any warnings, and my own rating for the book! In this way I ended up creating my own personal library database!
 
 
 
 
 **The Code:**
+
 Here is a small diagram showing how all the different programs interact with each other.
 
 
