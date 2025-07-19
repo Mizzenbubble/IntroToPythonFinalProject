@@ -1,0 +1,133 @@
+Hunger Games, The
+Collins, Suzanne
+2008
+3
+1
+1
+4
+Catching Fire
+Collins, Suzanne
+2009
+3
+1
+1
+5
+Mockingjay
+Collins, Suzanne
+2010
+3
+1
+1
+3
+Catcher in the Rye, The
+Salinger, J.D.
+1951
+0
+0
+3
+1
+Wringer, The
+Spinelli, Jerry
+1996
+5
+0
+1
+2
+Giver, The
+Lowry, Lois
+1993
+3
+1
+0
+3
+Don Quixote
+Cervantes, de Miguel
+1605
+4
+1
+0
+5
+Count of Monte Cristo, The
+Dumas, Alexandre
+1846
+1
+4
+1
+5
+Pride & Prejudice
+Austen, Jane
+1813
+1
+4
+0
+3
+Lord of the Rings, The
+Tolkien, J. R . R.
+1954
+4
+0
+3
+4
+Diary of Anne Frank, The
+Frank, Anne
+1959
+0
+0
+3
+5
+Outsiders, The
+Hinton, S.E.
+1967
+4
+0
+2
+5
+Twilight
+Meyer, Stephenie
+2008
+2
+4
+3
+3
+Gone with the Wind
+Mitchell, Margaret
+1936
+1
+1
+0
+1
+Great Gatsby, The
+Fitzgerald, Scott F.
+1925
+1
+1
+0
+3
+Huckleberry Finn
+Twain, Mark
+1884
+4
+0
+0
+5
+Alice in Wonderland
+Carroll, Lewis
+1865
+4
+0
+0
+5
+Wuthering Heights
+Bronte, Emily
+1847
+1
+4
+0
+4
+Frankenstein
+Shelly, Mary
+1818
+5
+0
+3
+3
