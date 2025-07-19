@@ -6,9 +6,11 @@ Here is a link to my blog with my process and thoughts: https://learning1about1p
 
 
 
+
 **Problem:**
 
 I a very active reader and have many close family and friends who are also very active readers. When you read a lot it can be difficult remembering everything you've read! Sometimes I want to go back and reread a book but it can be very difficult trying to find the book when all I have are disorganized links, a stack of books, or scribbled titles. So I thought it would be cool to create a database for all of my books! Key features I would want to include would be: the ability to add to the database, display all the books in the database, and display statistics of the database. But I didn't just want a list of a bunch of titles of books - that wouldn't really help me solve my problem! So it was important to me that I could also include other crucial information that might help me remember the details of each book! For this reason I included other bits of information to be stored in the database like author, year published, genre, what relationships were in the book, any warnings, and my own rating for the book! In this way I ended up creating my own personal library database!
+
 
 
 
@@ -19,6 +21,7 @@ Here is a small diagram showing how all the different programs interact with eac
 
 
 Write:
+
 To start I began working on a way of getting the information I wanted from the user. I made a greeting and prompted the user to start by entering the title for the work (I later went back and made sure to include an option for the user to back out to a main menu I hadn't yet created). Once I had the title I just had the user enter a series of information like the author, year published, etc. I originally just had the code immediately save this to the library.txt file but later realized that the user could maybe make a mistake or a typo and that they might wish to change their entry so I created a temp_list = [] to temporarily store all the information. 
 
 I decided it would be better to store things like genre, relationships, and warnings just as an integer for a few reasons. It would make it easier for the user to just type '1' for Romance rather 'Romance' it would also ensure that I wouldn't have to worry about spelling mistakes, accidental spaces or distinguishing between 'Romance', 'romance', ' romance', 'romance ', etc. Additionally, by limiting what the user could select it limited the options and allowed for simpler data to be displayed later on. (For example, if someone was given free reign there might be 32 different genres and I felt that was a bit excessive and wouldn't result in a clear and easy to read data / display for later.)
@@ -29,10 +32,12 @@ Finally, to finish off the writing process I just needed to have the user confir
 
 
 Decode:
+
 As mentioned above this decoder.py was used to convert the entries from the user back into words that were consistent (ie no 'Romance' vs 'romance'). This decoder is used in the write.py and display.py programs. I feel the code is pretty straight forward. If you had the value rating = 2 and sent that 2 to the rating function: rating(2) would return the string '2 Stars' thus converting the integer input that is extracted from the temp list (write.py) or txt file (display.py) into a string to be displayed to the user.
 
 
 Display:
+
 Now that I had a way of writing (write.py)) and decoding (decoder.py) all the information in the library.txt file I wanted to have a way of displaying everything.
 
 I started by importing decoder.py and listmaker.py. I had the listmaker.py program make me a list with all the information in the library.txt file so I could work with that. Next I displayed a menu for the user to select what they wanted displayed. I thought it would be boring to just have it display all the information in the library.txt file and should be able to do some level of filtering. I could have made this portion more advanced and extensive but I figured what I have was a good demonstration of features.
@@ -49,10 +54,12 @@ I also made sure to include an error message if anything other than numbers 0-5 
 
 
 List maker:
+
 I use listmaker.py in both display.py and statistics.py so it made sense for it to have it's own program. First it creates an empty list to put all the information. Then it just loops through reading all the information in the library.txt file and then either removing the '\n' or making the value an integer. Then it ends by appending all of that information to the new list and returning that list.
 
 
 Statistics:
+
 The next main feature I wanted was a way for the program to display different statistics. Just like with display.py I'm sure I could have added more detailed features and fully flushed out all possible options but I felt that might have been a bit too ambitious and unnecessary since this program is mostly just for personal use. 
 
 I imported listmaker.py to begin since I would use this program in multiple functions.
@@ -65,6 +72,7 @@ Finally I needed to make a statistics() function to mesh everything together! Th
 
 
 Main:
+
 Finally I will discuss the Main Program.py. Even though I am discussing this last it was actually constantly worked on as I finished each layer of code. 
 
 I imported the three major programs that handle most of the work in the code: write.py, display.py, and statistics.py.
@@ -74,7 +82,9 @@ First I made sure to open the library.txt file in append mode. This would create
 
 
 
+
 **Thoughts on What I Learned:**
+
 Once I had figured out my writer program I wanted to make sure I knew how to extract all the information from the library.txt file before making anything more complicated. I had some difficulty reading the file and having each line be added to a list. I needed to make sure the entries were being properly stored in the list as either a string - the title and author's name - or an integer for all the rankings and number shortcuts I employed. To do this I did a lot of research on the web with prompts like "how to read strings and numbers in a txt file." I think this is ultimately why I ended up using the classes even though I think I could figure out a better way now.
 
 In the statistics.py I originally just had the total_works() also print and display the total works: print(f'There are {count} total works in the library.'). But then I realized I could use the same function to easily calculate the averages in the genre and rating statistics! So I just edited it to return the count of total works instead!
@@ -84,5 +94,7 @@ display.py and statistics.py were both quite long and in depth programs that did
 
 
 
+
 **Conclusion:**
+
 I started this project just to make enjoying my own hobby easier but I can easily see how something like this could be shared with friends and family and they could have their own library databases. I also really loved the customization aspect. I could add different filters and key information that I wanted to make sure I stored. Someone else might not care much about the year of publication and I could easily edit the code to remove this aspect and perhaps add a more desirable aspect for that person!
