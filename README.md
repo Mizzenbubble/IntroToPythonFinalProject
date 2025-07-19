@@ -18,10 +18,6 @@ I am very active reader and have many close family and friends who are also very
 
 **The Code:**
 
-Here is a small diagram showing how all the different programs interact with each other.
-
-
-
 Write:
 
 To start I began working on a way of getting the information I wanted from the user. I made a greeting and prompted the user to start by entering the title for the work (I later went back and made sure to include an option for the user to back out to a main menu I hadn't yet created). Once I had the title I just had the user enter a series of information like the author, year published, etc. I originally just had the code immediately save this to the library.txt file but later realized that the user could maybe make a mistake or a typo and that they might wish to change their entry so I created a temp_list = [] to temporarily store all the information. 
