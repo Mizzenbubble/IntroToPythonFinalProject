@@ -1,5 +1,4 @@
-import listmaker
-import add
+import write
 import display
 import statistics
 
@@ -17,12 +16,11 @@ def main():
 
     while request != '': #set up a loop so user can do multiple things / doesn't have to restart the program each time they want to do something
         if request == '1': #Display library
-            display.display()
+            request = display.display()
         elif request == '2': #Add to library
-            add.new()
-            print('The above information has been entered into the library database!\n')
+            request = write.write()
         elif request == '3': #Statistics
-            statistics.statistics()
+            request = statistics.statistics()
         elif request == '0': #end the program
             library.close()
             exit()
