@@ -15,9 +15,11 @@ I a very active reader and have many close family and friends who are also very 
 
 
 
+
 **The Code:**
 
 Here is a small diagram showing how all the different programs interact with each other.
+
 
 
 Write:
@@ -31,9 +33,11 @@ Now that I had all the information from the user I thought it would be nice to c
 Finally, to finish off the writing process I just needed to have the user confirm the information entered. I created an if-else statement so that if it was correct I had them type 'y' but I also accounted for 'Y'. If the information was correct I simply wrote it down in the library.txt file. For all other responses I defaulted to throwing away the entered information (ie if the user maybe mistyped 'h' which is directly between the 'y' and 'n' key on the keyboard I felt it was better to err on the side of caution and not add the entry to the library.txt file). I ended the entire loop by asking for the title of the next entry or presented the option to exit back to the main menu. And then of course remembered to close the library.txt file.
 
 
+
 Decode:
 
 As mentioned above this decoder.py was used to convert the entries from the user back into words that were consistent (ie no 'Romance' vs 'romance'). This decoder is used in the write.py and display.py programs. I feel the code is pretty straight forward. If you had the value rating = 2 and sent that 2 to the rating function: rating(2) would return the string '2 Stars' thus converting the integer input that is extracted from the temp list (write.py) or txt file (display.py) into a string to be displayed to the user.
+
 
 
 Display:
@@ -53,9 +57,11 @@ Finally I needed to allow the user to return the main menu if they entered that 
 I also made sure to include an error message if anything other than numbers 0-5 were entered because I thought it looked nice and gave feedback to the user if a mistake was made rather than just nothing happening. And finally I ended the while loop so that it could continue to collect requests from the user.
 
 
+
 List maker:
 
 I use listmaker.py in both display.py and statistics.py so it made sense for it to have it's own program. First it creates an empty list to put all the information. Then it just loops through reading all the information in the library.txt file and then either removing the '\n' or making the value an integer. Then it ends by appending all of that information to the new list and returning that list.
+
 
 
 Statistics:
@@ -71,6 +77,7 @@ Next I wanted to make a function to give me more specific information about the 
 Finally I needed to make a statistics() function to mesh everything together! This is the function that main.py calls! It was really neat having such a multilayered function calling system ie: main() -> statistics() -> ranking_stats() -> total_works() -> listmaker(). This statistics() function wasn't very complicated and is very similar to a lot of previously discussed functions. I started by requesting the user for input on what they would like to do then set up a loop and if-elif-else statements to go through all the options and run the above related statistics functions when requested. Similarly with display.py I made an error statement that would be displayed when a mistype occured. And just like in writer.py and display.py I made sure to include a way to return to the main menu by returning the new_request selected from an identical main menu.
 
 
+
 Main:
 
 Finally I will discuss the Main Program.py. Even though I am discussing this last it was actually constantly worked on as I finished each layer of code. 
@@ -83,6 +90,7 @@ First I made sure to open the library.txt file in append mode. This would create
 
 
 
+
 **Thoughts on What I Learned:**
 
 Once I had figured out my writer program I wanted to make sure I knew how to extract all the information from the library.txt file before making anything more complicated. I had some difficulty reading the file and having each line be added to a list. I needed to make sure the entries were being properly stored in the list as either a string - the title and author's name - or an integer for all the rankings and number shortcuts I employed. To do this I did a lot of research on the web with prompts like "how to read strings and numbers in a txt file." I think this is ultimately why I ended up using the classes even though I think I could figure out a better way now.
@@ -90,6 +98,7 @@ Once I had figured out my writer program I wanted to make sure I knew how to ext
 In the statistics.py I originally just had the total_works() also print and display the total works: print(f'There are {count} total works in the library.'). But then I realized I could use the same function to easily calculate the averages in the genre and rating statistics! So I just edited it to return the count of total works instead!
 
 display.py and statistics.py were both quite long and in depth programs that did multiple things. I wrote display.py first and it ended up just being one very long function. I think I learned from this and when I made statistics.py I made a main statistics function and individual functions to handle all the different operations I wanted to be able to execute. I think this approach was far better because it allowed me to test the code in smaller chunks. I could test genre_stats() to find errors and then once that worked I could incorporate that back into the larger statistics() function. This is what I did on a larger scale as well with making all separate programs and having them link back into main.py rather than having everything in a super long program. This made troubleshooting much easier and overall I was able to avoid a lot of frustration in finding where an error was occurring and could immediately jump into understanding why an error was occuring. This method was also nice because I could reuse total_works() in genre_stats() and ranking_stats()! It felt very satisfying to have one function or program be used in multiple places!
+
 
 
 
